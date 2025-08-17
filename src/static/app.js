@@ -22,19 +22,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Pretty participants section
         let participantsHTML = `
-          <div class="participants-section">
+          <div class="participants-section" style="margin-top:14px;padding:10px 12px;background:#f1f8e9;border-radius:4px;border:1px solid #c5e1a5;">
             <strong>Participants:</strong>
             ${
               details.participants.length > 0
-                ? `<ul class="participants-list">
+                ? `<ul class="participants-list" style="margin:8px 0 0 18px;list-style-type:disc;padding-left:0;">
                     ${details.participants
                       .map(
                         (email) =>
-                          `<li><span class="participant-email">${email}</span></li>`
+                          `<li><span class="participant-email" style="color:#33691e;font-size:0.97em;word-break:break-all;">${email}</span></li>`
                       )
                       .join("")}
                   </ul>`
-                : `<span class="no-participants">No one has signed up yet.</span>`
+                : `<span class="no-participants" style="color:#888;font-style:italic;margin-left:4px;">No one has signed up yet.</span>`
             }
           </div>
         `;
